@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Trajectoire en direct</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <h1>ITI Explore</h1>
+    <span id="status">En attente…</span>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Info Bar -->
+  <div id="info">
+    <div class="info-left">
+      <span class="info-stat">
+        <span></span>
+        <span class="info-stat-value" id="info-points">0</span>
+        <span>points</span>
+      </span>
+    </div>
+    <div class="info-right">
+      <span class="info-stat">
+        <span></span>
+        <span class="info-stat-value" id="info-photos">0</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div id="controls-container">
+    <div class="controls-status">
+      <span id="status-label">Prêt</span>
+      <span id="timer-label"></span>
+    </div>
+    <div id="controls">
+      <button class="btn" id="btn-start" onclick="lancer_acquisition()">▶ Start</button>
+      <button class="btn" id="btn-stop" disabled onclick="arreter_acquisition()">⏹ Stop</button>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div id="summary">
+    <div class="s-card">
+      <span class="s-card-label">Distance</span>
+      <span class="s-card-value" id="res-distance">—</span>
+    </div>
+    <div class="s-card">
+      <span class="s-card-label">Durée</span>
+      <span class="s-card-value" id="res-duration">—</span>
+    </div>
+    <div class="s-card">
+      <span class="s-card-label">Vitesse moy.</span>
+      <span class="s-card-value" id="res-speed-avg">—</span>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../static/app.js"></script>
+</body>
+</html>
